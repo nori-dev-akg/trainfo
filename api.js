@@ -22,7 +22,7 @@ app.get('/googlehome/:voiceFileName', (req, res) => {
     res.status(400).send('Invalid Parameters.');
 }
 
-  const file = fs.readFileSync('/home/pi/train/voice/' + voiceFileName, 'binary');
+  const file = fs.readFileSync('/home/pi/tarinfo/voice/' + voiceFileName, 'binary');
   res.setHeader('Content-Length', file.length);
   res.write(file, 'binary');
   res.end();
